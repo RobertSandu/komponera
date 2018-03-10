@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  komponera:
+    image: komponera
+    build:
+      context: .
+      dockerfile: Komponera/Dockerfile
