@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Komponera.Controllers.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Komponera.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
-    {
+    public class ValuesController : BaseController
+	{
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -40,6 +41,13 @@ namespace Komponera.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        // PATCH api/values/5
+        [HttpPatch("{id}")]
+        public void Patch(int id)
+        {
+
         }
     }
 }
